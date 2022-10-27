@@ -1,4 +1,6 @@
 from .load import load
 
-SCREEN_WIDTH = None
-SCREEN_HEIGHT = None
+# Temporary Hardcoded Values
+SCREEN_WIDTH = 256
+SCREEN_HEIGHT = 240
+SCREEN_SCALE = 4

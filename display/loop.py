@@ -9,5 +9,9 @@ def loop():
                 pygame.quit()
                 raise RuntimeError
 
+        # Fill Background
         display.screen.fill((255, 255, 255))
+
+        display.upscaler.update()
+
         pygame.display.update()
