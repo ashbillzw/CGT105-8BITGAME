@@ -6,9 +6,10 @@ def setup():
 
     display.upscaler.init()
 
-    display.screen = pygame.display.set_mode((
-        settings.SCREEN_WIDTH,
-        settings.SCREEN_HEIGHT
-    ))
+    display.screen = pygame.display.set_mode([
+        size * settings.SCREEN_SCALE for size in [
+            settings.SCREEN_WIDTH,
+            settings.SCREEN_HEIGHT
+        ]])
 
     return display

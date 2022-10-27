@@ -1,4 +1,4 @@
-import display, settings
+import pygame, display, settings
 
 
 def init():
@@ -9,8 +9,14 @@ def update():
     return None
 
 class Upscaler:
-    def __init__(self):
-        pass
-
     def update(self):
-        pass
+        sw = settings.SCREEN_WIDTH
+        sh = settings.SCREEN_HEIGHT
+        ss = settings.SCREEN_SCALE
+
+        display.screen.blit(
+            pygame.transform.scale(
+                display.screen.subsurface(0, 0, sw, sh),
+                [size * ss for size in [sw, sh]]
+            ), (0, 0)
+        )
