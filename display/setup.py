@@ -1,14 +1,12 @@
-import display
+import pygame, display, settings
 
-
-SCREEN_WIDTH = 256
-SCREEN_HEIGHT = 240
-
-import pygame
 
 def setup():
     pygame.init()
 
-    display.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    display.screen = pygame.display.set_mode((
+        settings.SCREEN_WIDTH,
+        settings.SCREEN_HEIGHT
+    ))
 
     return display
